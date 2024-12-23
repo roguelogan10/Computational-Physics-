@@ -27,17 +27,17 @@ There is at least one path in the filesystem associated with each file. There
 are two types of paths, *relative paths* and *absolute paths*
 
 ```bin/RungeKutta/rk.exe
-/home/george/bin/RungeKutta/rk.exe
-```
+/home/george/bin/RungeKutta/rk.exe```
 These two files refers to the same file. The first one is the *relative path* and the sescond is the *absolute path*. Absolute paths start by a slash / character. 
 
-```/home/john/bin/RungeKutta/rk.exe
-/home/george/CompPhys/bin/RungeKutta/rk.exe
-```
+```/home/john/bin/RungeKutta/rk.exe```
+```/home/george/CompPhys/bin/RungeKutta/rk.exe```
+
+
 
 These absolute paths refers to differents files because the paths are not the same. 
 
-- '/': is the *root directory*
+- /: is the *root directory*
 - directory: position in the filesystem. We are in the *current or working directory*
 - Every directory has a unique parent noted by *..*
 - The parent of the *root directory* is itself.
@@ -45,3 +45,6 @@ These absolute paths refers to differents files because the paths are not the sa
 
 ![Texte alternatif](https://github.com/roguelogan10/images/blob/main/filesystem.png "Titre de l'image")
 
+the filesystem is a tree of directories with the root directory
+at its top which branch to its subdirectories, which in their turn branch
+into other subdirectories and so on
