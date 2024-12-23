@@ -18,8 +18,7 @@ operating system, which is the most effective way to perform complicated tasks.
 
 ### Operating system
 
-In the Unix operating system everything is a file, and files are or-
-ganized in a unique and unified filesystem. 
+In the Unix operating system everything is a file, and files are organized in a unique and unified filesystem. 
 
 
 #### filesystem
@@ -40,14 +39,54 @@ These two paths refers to the same file. The first one is the *relative path* an
 
 These absolute paths refers to differents files because the paths are not the same. 
 
-- /: is the *root directory*
+- '/': is the *root directory*
 - directory: position in the filesystem. We are in the *current or working directory*
 - Every directory has a unique parent noted by *..*
 - The parent of the *root directory* is itself.
-
+- */home* : home directory
+- */etc* : configuration files directory
+- */bin* or */usr/bin* or */usr/local/bin* : application executables directory
+- */lib* or */usr/lib*: software libraries
+- '.': Current directory
+- '..': Parent directory
+- '~' : home directory of the user
 
 ![Texte alternatif](https://github.com/roguelogan10/images/blob/main/filesystem.png "Titre de l'image")
 
 the filesystem is a tree of directories with the root directory
 at its top which branch to its subdirectories, which in their turn branch
-into other subdirectories and so on
+into other subdirectories and so on.
+
+
+**Basic command for filesystem navigation**
+- cd : change directory
+- pwd : print working directories
+-
+- 
+
+| commands| definition | role | arguments |
+|---|---|---|---|
+|cd | change directory | change the current directory | absolute/relative path|
+| pwd | print working directories| print working directories| No arguments|
+| mkdir | Make a directory| creates new directories| the name of the new directory |
+|rmdir |removes directories|  removes empty directories| the name of the empty directory|
+|mkdir -p|  |create directories more than one level down the filesystem| the new path|  
+|ls| list short| list the contents of a directory|No argument/the name of the directory|
+|ls -l| list the contents of the current directory together with useful information on the files in 9 columns| No argument/the name of the directory|
+
+
+The first column lists the permissions of the files (see below). The second one lists the number of links of the files(For a directory,it is the number of its subdirectories plus 2(corresponding to the parent directory
+and itself)). The third one lists the user who is the owner of each file. The fourth one lists the group that is assigned to the files. The fifth one lists the size of the file in bytes (=8 bits). The next three ones
+list the modification time of the file and the last one the paths of the files.File permissions9 are separated in three classes: owner permissions,
+group permissions and other permissions. Each class is given three specific permissions, r=read, w=write and x=execute. For regular files, read
+permission effectively means access to the file for reading/copying, write permission means permission to modify the contents of the file and execute permission means permission to execute the file as a command10.
+For directories, read permission means that one is able to read the names of the files in the directory (but not make it as current directory with the cd command), write permission means to be able to modify its contents
+(i.e. create, delete, and rename files) and execute permission grants permission to access/modify the contents of the files (but not list the names
+of the files, this is granted by the read permission).
+
+The command ls -l lists permissions in three groups. The owner (positions 2-4), the group (positions 5-7) and the rest of the world (others-positions 8-10)
+
+File permissions can be modified by using the command `chmod`:
+```> chmod u+x file
+> chmod og-w file1 file2
+> chmod a+r file```
