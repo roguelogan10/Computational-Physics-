@@ -87,6 +87,9 @@ of the files, this is granted by the read permission).
 The command ls -l lists permissions in three groups. The owner (positions 2-4), the group (positions 5-7) and the rest of the world (others-positions 8-10)
 
 File permissions can be modified by using the command `chmod`:
-```> chmod u+x file
+```
+> chmod u+x file
 > chmod og-w file1 file2
-> chmod a+r file```
+> chmod a+r file
+
+```
