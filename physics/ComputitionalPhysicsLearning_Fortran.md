@@ -108,3 +108,33 @@ everyone (a≡all) obtain read (r) permission on the file named file.
 |mv | move |moves, or renames, files| filename and the directory where to put the file/ *old name* and *new name*|
 |rm | remove| deletes files| name of the file|
 |rm -i| remove| asked for confirmation before delete| name of the file|
+
+
+### Commands 
+
+The shell is a program that creates an interface between a user and the operating system. Commands in a Unix operating system are files with execute permission. The shell reads its and interprets commands.
+
+*shell variables* and *environment variables* have a name, which is a string of permissible characters, and their values are obtained by preceding their name with the $ character.
+
+'*': character as a shorthand notation for a group of files.
+
+For each command there are three special files associated with it. The first one is the standard input (stdin), the second one is the standard output
+(stdout) and the third one the standard error (stderr). These are files where the program can print or read data from. By default, these files
+are the terminal that the user uses to execute the command.
+
+The advantage of using these special files in order to read/write data is that the user can redirect the input/output to these files to any file he/she
+wants.
+
+'>': charater at the end of a command redirects the *stdout* to the file whose name is written after >
+
+'>>': If we want to append data without erasing the existing contents, then we should use the string of characters >>
+
+'<': The redirection of the stdin is accomplished by the use of the character <
+
+'>&':the stderr by the use of the string of characters >&
+
+
+'|': redirect the stdout of a command to be the stdin of another command. Useful for the piping (the process for creating filters). 
+```
+> cmd1 | cmd2 | cmd3 |...|cmdN
+```
