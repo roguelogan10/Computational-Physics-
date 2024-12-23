@@ -27,10 +27,13 @@ There is at least one path in the filesystem associated with each file. There
 are two types of paths, *relative paths* and *absolute paths*
 
 ```bin/RungeKutta/rk.exe``` 
+
 ```/home/george/bin/RungeKutta/rk.exe```
+
 These two files refers to the same file. The first one is the *relative path* and the sescond is the *absolute path*. Absolute paths start by a slash / character. 
 
 ```/home/john/bin/RungeKutta/rk.exe```
+
 ```/home/george/CompPhys/bin/RungeKutta/rk.exe```
 
 
