@@ -7,8 +7,8 @@ for procedural and object oriented programming.
 
 | Compilers(language that need to be compiled by a compiler) | Interpreters(languages that are interpreted line by line)|
 |---|---|
-|   A compiler is a tool that analyzes the whole program and optimizes the computer instructions executed by the computer. | simple in their use, but they can be prohibitively slow when it comes to a numerically demanding program  |
-|   | if programming time is more valuable, then a simple, interpreted language can lead to faster results|
+| A compiler is a tool that analyzes the whole program and optimizes the computer instructions executed by the computer. | simple in their use, but they can be prohibitively slow when it comes to a numerically demanding program  |
+| Very fast and high performance computing  | if programming time is more valuable, then a simple, interpreted language can lead to faster results|
 |Fortran, C, C++ , Java,...| Python, perl, awk,shell scripting, Macsyma, Mathematica, Octave, Matlab,...|
 
 
@@ -25,15 +25,19 @@ In the Unix operating system everything is a file, and files are organized in a 
 There is at least one path in the filesystem associated with each file. There
 are two types of paths, *relative paths* and *absolute paths*
 
-```bin/RungeKutta/rk.exe``` 
+```
+bin/RungeKutta/rk.exe 
+/home/george/bin/RungeKutta/rk.exe
 
-```/home/george/bin/RungeKutta/rk.exe```
+```
 
 These two paths refers to the same file. The first one is the *relative path* and the sescond is the *absolute path*. Absolute paths start by a slash / character. 
 
-```/home/john/bin/RungeKutta/rk.exe```
+```
+/home/john/bin/RungeKutta/rk.exe
+/home/george/CompPhys/bin/RungeKutta/rk.exe
 
-```/home/george/CompPhys/bin/RungeKutta/rk.exe```
+```
 
 
 
@@ -59,10 +63,8 @@ into other subdirectories and so on.
 
 
 **Basic command for filesystem navigation**
-- cd : change directory
-- pwd : print working directories
--
-- 
+
+
 
 | commands| definition | role | arguments |
 |---|---|---|---|
@@ -93,3 +95,16 @@ File permissions can be modified by using the command `chmod`:
 > chmod a+r file
 
 ```
+
+Using the first command, the owner (u≡ user) obtains (+) permission to execute (x) the file named file. Using the second one, the rest of
+the world (o≡ others) and the group (g≡group) loose (-) the write (w) permission to the files named file1 and file2. Using the third one,
+everyone (a≡all) obtain read (r) permission on the file named file.
+
+**Basic command for administering files in the filesystem**
+
+| commands| definition | role | arguments |
+|---|---|---|---|
+|cp |copy| copies the contents of files into other files| *first file* and *second file*|
+|mv | move |moves, or renames, files| filename and the directory where to put the file/ *old name* and *new name*|
+|rm | remove| deletes files| name of the file|
+|rm -i| remove| asked for confirmation before delete| name of the file|
